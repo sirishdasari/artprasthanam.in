@@ -272,13 +272,13 @@ const BioPage = (props) => {
           </ul>
           <hr />
           <h2 id="forms">Forms</h2>
-          <form method="post" action="#">
+          <form method="post" action="https://getform.io/f/avrwngza">
             <div className="row gtr-uniform">
               <div className="col-6 col-12-xsmall">
                 <input
                   type="text"
-                  name="demo-name"
-                  id="demo-name"
+                  name="name"
+                  id="name"
                   defaultValue
                   placeholder="Name"
                 />
@@ -286,14 +286,14 @@ const BioPage = (props) => {
               <div className="col-6 col-12-xsmall">
                 <input
                   type="email"
-                  name="demo-email"
-                  id="demo-email"
+                  name="email"
+                  id="email"
                   defaultValue
                   placeholder="Email"
                 />
               </div>
               {/* Break */}
-              <div className="col-12">
+              {/* <div className="col-12">
                 <select name="demo-category" id="demo-category">
                   <option value>- Category -</option>
                   <option value={1}>Manufacturing</option>
@@ -301,7 +301,7 @@ const BioPage = (props) => {
                   <option value={1}>Administration</option>
                   <option value={1}>Human Resources</option>
                 </select>
-              </div>
+              </div> */}
               {/* Break */}
               <div className="col-4 col-12-small">
                 <input

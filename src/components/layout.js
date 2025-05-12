@@ -14,8 +14,14 @@ const Layout = (props) => {
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
-            onClick={() => setToggleNav(!toggleNav)}
+            href="#"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default behavior for invalid href
+              setToggleNav(!toggleNav);
+            }}
+            role="button" // Change role to button for accessibility
+            aria-label="Toggle navigation"
+            aria-expanded={toggleNav}
           >
             <div
               className="hamburger hamburger--collapse"
@@ -32,40 +38,40 @@ const Layout = (props) => {
             <ul className="nav" role="menu">
               <li
                 className={`nav-home  ${data.pathname === "/" ? "nav-current" : ""} `}
-                role="menuitem"
+                role="none" // Remove interactive role from non-interactive element
               >
-                <Link to={`/`}>Home</Link>
+                <Link to={`/`} role="menuitem">Home</Link>
               </li>
               <li
                 className={`nav-home  ${data.pathname.includes("/bio") ? "nav-current" : ""} `}
-                role="menuitem"
+                role="none" // Remove interactive role from non-interactive element
               >
-                <Link to={`/bio`}>Bio</Link>
+                <Link to={`/bio`} role="menuitem">Bio</Link>
               </li>
               <li
                 className={`nav-home  ${data.pathname.includes("/work") ? "nav-current" : ""} `}
-                role="menuitem"
+                role="none" // Remove interactive role from non-interactive element
               >
-                <Link to={`/work`}>Work</Link>
+                <Link to={`/work`} role="menuitem">Work</Link>
               </li>
-              <li
+              {/* <li
                 className={`nav-home  ${data.pathname.includes("/news") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/news`}>News</Link>
-              </li>
+              </li> */}
               <li
                 className={`nav-home  ${data.pathname.includes("/contact") ? "nav-current" : ""} `}
-                role="menuitem"
+                role="none" // Remove interactive role from non-interactive element
               >
-                <Link to={`/contact`}>Contact</Link>
+                <Link to={`/contact`} role="menuitem">Contact</Link>
               </li>
-              <li
+              {/* <li
                 className={`nav-home  ${data.pathname.includes("/elements") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/elements`}>Elements</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="site-head-center">
@@ -75,14 +81,14 @@ const Layout = (props) => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <Link
+              {/* <Link
                 to={`https://facebook.com/${social.facebook}`}
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
-              </Link>
+              </Link> */}
               <Link
                 to={`https://instagram.com/${social.twitter}`}
                 title="Instagram"
@@ -92,14 +98,14 @@ const Layout = (props) => {
                 Instagram
               </Link>
 
-              <Link
+              {/* <Link
                 to={`https://github.com/lilxyzz/gatsby-clay`}
                 title="Github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -111,7 +117,8 @@ const Layout = (props) => {
       </main>
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built by {""}
+        Bhavana Ellasiri
+        {/* Built by {""}
         <a
           href="https://travislord.xyz/"
           target="_blank"
@@ -126,7 +133,7 @@ const Layout = (props) => {
           rel="noopener noreferrer"
         >
           Abdul Waqar
-        </a>
+        </a> */}
       </footer>
     </div>
   );

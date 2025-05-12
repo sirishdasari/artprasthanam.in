@@ -1,16 +1,17 @@
 const siteConfig = {
-  name: 'Clay',
-  shortName: 'Clay',
-  description: 'Clay - Personal Gatsby Theme',
+  name: 'ArtPrasthanam',
+  shortName: 'ArtPrasthanam',
+  description: 'ArtPrasthanam - The Artist',
   url: '/', // Domain of your site without prefix!
   prefix: '/',
-  author: 'Travis Lord & Abdul Waqar',
-  twitter: '' ,
+  author: 'Bhavana Ellasiri',
+  twitter: 'art_prasthanam' ,
   facebook:'',
   github:'',
   manifest_icon:`src/img/vase.png`,
   image:`/vase.png`
 
 }
+
 
 module.exports = siteConfig
